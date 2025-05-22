@@ -341,8 +341,9 @@ public class UrlQuery {
 				}
 				sb.append(keyCoder.encode(name, charset, safeChars));
 				value = entry.getValue();
+				sb.append("=");
 				if (null != value) {
-					sb.append("=").append(valueCoder.encode(value, charset, safeChars));
+					sb.append(valueCoder.encode(value, charset, safeChars));
 				}
 			}
 		}
